@@ -11,3 +11,4 @@ package-lock.json
 /build
 /coverage
 /storybook-static
+/.lila

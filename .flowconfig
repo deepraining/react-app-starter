@@ -4,6 +4,7 @@
 .*/build
 .*/coverage
 .*/storybook-static
+.*/.lila
 
 [include]
 
