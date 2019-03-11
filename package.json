@@ -1,0 +1,116 @@
+{
+  "name": "react-app-starter",
+  "version": "0.1.0",
+  "description": "React App Starter - A boilerplate for creating a React application, using Webpack and Storybook.",
+  "private": true,
+  "author": "senntyou <jiangjinbelief@163.com>",
+  "homepage": "https://github.com/senntyou/react-app-starter",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/senntyou/react-app-starter"
+  },
+  "keywords": [
+    "react",
+    "app",
+    "starter",
+    "boilerplate",
+    "storybook",
+    "webpack",
+    "gulp",
+    "jest",
+    "enzyme"
+  ],
+  "bugs": {
+    "url": "https://github.com/senntyou/react-app-starter/issues"
+  },
+  "readmeFilename": "README.md",
+  "scripts": {
+    "precommit": "npm run lint-staged",
+    "lint-staged": "lint-staged",
+    "prettier": "prettier --write \"./**/*.{js,jsx,css,less,scss,sass,html,md,json}\"",
+    "eslint": "eslint \"./**/*.{js,jsx}\"",
+    "eslint:fix": "eslint \"./**/*.{js,jsx}\" --fix",
+    "stylelint": "stylelint \"./**/*.{css,less,scss,sass}\"",
+    "stylelint:fix": "stylelint \"./**/*.{css,less,scss,sass}\" --fix",
+    "flow": "flow",
+    "flow:check": "flow check",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "clean": "rimraf build",
+    "test": "jest",
+    "test-watch": "jest --watch --notify",
+    "test-cover": "jest --coverage",
+    "coverage": "npm run test-cover && opn coverage/lcov-report/index.html"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.0.0",
+    "@storybook/addon-links": "^5.0.0",
+    "@storybook/addons": "^5.0.0",
+    "@storybook/react": "^5.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.4.0",
+    "eslint-plugin-flowtype": "^3.2.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.3",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.3",
+    "flow-bin": "^0.94.0",
+    "husky": "^1.3.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.1.0",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^8.1.0",
+    "node-sass": "^4.11.0",
+    "opn-cli": "^4.0.0",
+    "prettier": "^1.15.3",
+    "rimraf": "^2.6.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "stylelint": "^9.9.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.{css,less,scss,sass}": [
+      "stylelint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.{html,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.3.4",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  }
+}
