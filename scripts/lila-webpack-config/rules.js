@@ -7,12 +7,18 @@ export const babelLoader = () => [
     loader: 'babel-loader',
     test: /\.js$/,
     options: {
+      babelrc: false,
+      configFile: false,
       presets: ['@babel/preset-env', '@babel/preset-flow'],
       plugins: [
         '@babel/plugin-syntax-dynamic-import',
         '@babel/plugin-proposal-class-properties',
         '@babel/plugin-transform-runtime',
-        ['import', { libraryName: 'antd', libraryDirectory: 'lib' }, 'ant'],
+        [
+          'import',
+          { libraryName: 'antd', libraryDirectory: 'es', style: 'css' },
+          'ant',
+        ],
       ],
     },
     exclude: [/node_modules/],
@@ -21,6 +27,8 @@ export const babelLoader = () => [
     loader: 'babel-loader',
     test: /\.jsx$/,
     options: {
+      babelrc: false,
+      configFile: false,
       presets: [
         '@babel/preset-env',
         '@babel/preset-react',
@@ -31,6 +39,11 @@ export const babelLoader = () => [
         '@babel/plugin-proposal-class-properties',
         '@babel/plugin-transform-react-jsx',
         '@babel/plugin-transform-runtime',
+        [
+          'import',
+          { libraryName: 'antd', libraryDirectory: 'es', style: 'css' },
+          'ant',
+        ],
       ],
     },
   },
