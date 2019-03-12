@@ -6,7 +6,7 @@ import Welcome from '../components/Welcome';
 render(
   <div>
     <Button>Ant Design</Button>
-    <Welcome name="inner" />
+    <Welcome name="page" />
   </div>,
   document.getElementById('root'),
 );
